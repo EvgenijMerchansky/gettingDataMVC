@@ -1,10 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const webpack = require('webpack');
-console.log(webpack, 'webpack');
 
 module.exports = {
-    entry: './src/controller/controller.js',
+    entry: './src/controller/index.js',
 
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -21,8 +19,6 @@ module.exports = {
             title: 'dataMVC',
             template: './index.html'
         }),
-        new webpack.HotModuleReplacementPlugin({})
-        // new webpack
     ],
     devtool: 'cheap-eval-source-map'
 }
